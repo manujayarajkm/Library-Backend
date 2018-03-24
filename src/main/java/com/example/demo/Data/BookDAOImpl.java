@@ -23,7 +23,7 @@ public class BookDAOImpl implements BookDAO {
 	private final static String BOOK_RESERVE="Select available_nos from books where book_id=?";
 	private final static String BOOK_RESERVE_TITLE="Select available_nos from books where title=?";
 	private final static String ADD_BOOKNO="update books set available_nos=? where title=?";
-	private final static String SEARCH_BOOKS="select *from books where REPLACE (title,' ','') like ? and available_nos>0";
+	private final static String SEARCH_BOOKS="select *from books where title=?";
 	private final static String GET_BOOK="SELECT * FROM books where book_id=?";
 
 	
@@ -121,7 +121,9 @@ public class BookDAOImpl implements BookDAO {
 	@Override
 	public List<Book> searchBooks(String title) throws SQLException, ClassNotFoundException {
 		// TODO Auto-generated method stub
+		System.out.println("from dao "+title);
 		List<Book> book=jdbcTemplate.query(SEARCH_BOOKS,new BookMapper(),title);
+		System.out.println(book);
 		return book;
 	}
 

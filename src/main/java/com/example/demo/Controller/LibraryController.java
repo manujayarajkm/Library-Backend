@@ -127,6 +127,7 @@ public class LibraryController {
 	}
 	@RequestMapping(value="/searchBooks/{title}",method=RequestMethod.GET)
 	public List<Book> searchBooks(@PathVariable String title) throws ClassNotFoundException, SQLException{
+		System.out.println(title);
 		return bookService.searchBooks(title);
 		
 	}
