@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -80,9 +81,12 @@ public class TransactionDAOImpl implements TransactionDAO {
 	private final static String CLEAR_CART="delete from cart where user_id=?";
 	private final static String CLEAR_PURCHASE="delete from purchase where user_id=? && bill_id=0";
 	private final static String MY_PURCHASES="select purchase_id,title,author,count,price,(count*price) as subtotal,book_id,purchase_date,bill_id from purchase where user_id=? order by purchase_date";
+	private final static String RETREIVE_SALT="select salt from user where user_id=?";
+	private final static String RETREIVE_PASSWORD="select password from user where user_id=?";
+	private final static String INSERT_SALT="update user set salt=? where user_id=?";
+	private final static String INSERT_PASSWORD="update user set password=? where user_id=?";
 
-
-	private static String UPLOADED_FOLDER = "/Users/Manu/Desktop/Angular/Library/src/assets/profilepictures/";
+	private static String UPLOADED_FOLDER = "/Users/Manu/Desktop/Angular/Global-Library-FrontEnd/src/assets/profilepictures/";
 
 
 
@@ -92,6 +96,7 @@ public class TransactionDAOImpl implements TransactionDAO {
 	
 	@Autowired
 	JdbcTemplate jdbcTemplate;
+	
 
 	public TransactionDAOImpl() {
 		super();
@@ -322,8 +327,9 @@ public class TransactionDAOImpl implements TransactionDAO {
 		// TODO Auto-generated method stub
 		int tempDb=jdbcTemplate.queryForObject(GET_TEMP_KEY, new Object[]{userId},Integer.class);
 		if(tempCode==tempDb){
-			int rowCount=jdbcTemplate.update(UPDATE_PASSWORD,passwordNew,userId);
-			if(rowCount>0){
+			//int rowCount=jdbcTemplate.update(UPDATE_PASSWORD,passwordNew,userId);
+			int rowC=generatehash(passwordNew,userId);
+			if(rowC==0){
 				int rCount=jdbcTemplate.update(REMOVE_TEMP_KEY,userId);
 				{
 					if(rCount>0){
@@ -365,9 +371,11 @@ public class TransactionDAOImpl implements TransactionDAO {
 		}catch(EmptyResultDataAccessException e){
 			return "User does not exist";
 		}
-		if(passOld.equals(oldPassword)){
-			int rowCount=jdbcTemplate.update(UPDATE_PASSWORD,passwordNew,userId);
-			if(rowCount>0){
+		String pass=generateHashedPass(oldPassword,userId);
+		if(passOld.equals(pass)){
+			int passNew=generatehash(passwordNew,userId);
+			//int rowCount=jdbcTemplate.update(UPDATE_PASSWORD,passNew,userId);
+			if(passNew==0){
 			return "Password updated successfully";
 			}
 			else{
@@ -382,15 +390,21 @@ public class TransactionDAOImpl implements TransactionDAO {
 		// TODO Auto-generated method stub
 		
 		if (file.isEmpty()) {
+			
+			System.out.println("Image empty");
             
             return "File is empty";
         }
 		try {
+			
+			System.out.println("File recieved");
 
             // Get the file and save it somewhere
             byte[] bytes = file.getBytes();
             Path path = Paths.get(UPLOADED_FOLDER +name+".jpg");
             Files.write(path, bytes);
+            
+            System.out.println("File saved "+path);
 
             return "upload success";
 
@@ -611,6 +625,112 @@ public class TransactionDAOImpl implements TransactionDAO {
 	}
 		
 		
+	public static String generateString() {
+		
+        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        StringBuilder salt = new StringBuilder();
+        Random rnd = new Random();
+        while (salt.length() < 18) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+            salt.append(SALTCHARS.charAt(index));
+        }
+        String saltStr = salt.toString();
+        return saltStr;
+
+    
+}
+
+public int generatehash(String pass,int userId){
 	
+	System.out.println("call came");
+	String salt=generateString().toLowerCase();
+	System.out.println("salt is "+salt);
+	System.out.println("pass is "+pass);
+	
+	int rowCount=jdbcTemplate.update(INSERT_SALT,salt,userId);
+	
+	String newString=pass+salt;
+	
+	System.out.println("new string is "+newString);
+
+	String[] checkarray = new String[newString.length()];
+	for(int i=0;i<newString.length();i++){
+		checkarray[i]=newString.substring(i, i+1);
+	}
+	System.out.println(Arrays.toString(checkarray));
+	
+	Arrays.sort(checkarray);
+	System.out.println(Arrays.toString(checkarray));
+
+	String st=Arrays.toString(checkarray);
+	System.out.println("hashed value is "+st);
+	String str = String.join("", checkarray);
+	System.out.println("converted  is "+str);
+
+	int rowCount2=jdbcTemplate.update(INSERT_PASSWORD,str,userId);
+	if(rowCount2>0){
+		return 0;
+	}
+	else{
+		return 1;
+	}
+	
+}
+public String checkPassword(String username,String password){
+	
+	String salt=jdbcTemplate.queryForObject(RETREIVE_SALT, new Object[]{username},String.class);
+	String passfromdb=jdbcTemplate.queryForObject(RETREIVE_PASSWORD, new Object[]{username},String.class);
+
+	//String hash=generatehash("hello","manu");
+	
+	String newString=password+salt;
+
+	System.out.println("new string is "+newString);
+
+	String[] checkarray = new String[newString.length()];
+	for(int i=0;i<newString.length();i++){
+		checkarray[i]=newString.substring(i, i+1);
+	}
+	System.out.println(Arrays.toString(checkarray));
+	
+	Arrays.sort(checkarray);
+	System.out.println(Arrays.toString(checkarray));
+	String str = String.join("", checkarray);
+
+	System.out.println("after conversion "+str);
+	if(str.equals(passfromdb)){
+		System.out.println("passwords matching ");
+	}else{
+		System.out.println("not matching");
+	}
+	return str;
+	
+}
+	
+public String generateHashedPass(String pass,int userId){
+	
+	String salt=jdbcTemplate.queryForObject(RETREIVE_SALT, new Object[]{userId},String.class);
+	String passfromdb=jdbcTemplate.queryForObject(RETREIVE_PASSWORD, new Object[]{userId},String.class);
+
+	//String hash=generatehash("hello","manu");
+	
+	String newString=pass+salt;
+
+	System.out.println("new string is "+newString);
+
+	String[] checkarray = new String[newString.length()];
+	for(int i=0;i<newString.length();i++){
+		checkarray[i]=newString.substring(i, i+1);
+	}
+	System.out.println(Arrays.toString(checkarray));
+	
+	Arrays.sort(checkarray);
+	System.out.println(Arrays.toString(checkarray));
+	String str = String.join("", checkarray);
+
+	System.out.println("after conversion "+str);
+	return str;
+	
+}
 
 }
