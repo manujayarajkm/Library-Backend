@@ -1,11 +1,16 @@
 package com.example.demo.AdminData;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.example.demo.Data.BookMapper;
 import com.example.demo.Data.HireMapper;
@@ -24,7 +29,10 @@ public class AminDAOImpl implements AdminDAO {
 	private final static String BLOCK_MEMBER="update user set active='n' where user_id=?";
 	private final static String UNBLOCK_MEMBER="update user set active='y' where user_id=?";
 	private final static String HIRE_DETAILS="select hire.hire_id,hire.book_id,hire.user_id,user.name,books.title,hire.`took_date`,hire.`due_date` from hire INNER JOIN books ON hire.`book_id`= books.`book_id`INNER JOIN user ON hire.`user_id`= user.`user_id` where hire_id=?";
+	
+	private static String UPLOADED_FOLDER = "/Users/Manu/Desktop/Angular/Global-Library-FrontEnd/src/assets/images/";
 
+	
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 
@@ -118,6 +126,48 @@ public class AminDAOImpl implements AdminDAO {
 		// TODO Auto-generated method stub
 		List<Hire> hire=jdbcTemplate.query(HIRE_DETAILS,new HireMapper(),hireTd);
 		return hire;
+	}
+
+	
+
+	@Override
+	public String addNewBook(String title, String author, String genre, float price, String cover)
+			throws SQLException, ClassNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String saveCoverImage(MultipartFile file,String name) throws SQLException, ClassNotFoundException {
+		// TODO Auto-generated method stub
+		
+		if (file.isEmpty()) {
+			
+			System.out.println("Image empty");
+            
+            return "File is empty";
+        }
+		try {
+			
+			System.out.println("File recieved");
+
+            // Get the file and save it somewhere
+            byte[] bytes = file.getBytes();
+            Path path = Paths.get(UPLOADED_FOLDER +name+".jpg");
+            Files.write(path, bytes);
+            
+            System.out.println("File saved "+path);
+
+            return "upload success";
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            
+            return "failed";
+        }
+
+       
+		
 	}
 
 }

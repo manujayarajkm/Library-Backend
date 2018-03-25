@@ -52,6 +52,9 @@ public class BookDAOImpl implements BookDAO {
 			throws SQLException, ClassNotFoundException {
 		// TODO Auto-generated method stub
 		
+		System.out.println("inside add new book ");
+
+		
 		try{
 			int availbe_nos=jdbcTemplate.queryForObject(BOOK_RESERVE_TITLE,new Object[]{title},Integer.class );
 			availbe_nos++;
@@ -63,7 +66,9 @@ public class BookDAOImpl implements BookDAO {
 				return "Sorry soomething's broken";
 			}
 		}catch(EmptyResultDataAccessException e){
-			int rowCount=jdbcTemplate.update(ADD_BOOK,title,author,genre,price,cover);
+			System.out.println("inside catch ");
+			int rowCount=jdbcTemplate.update(ADD_BOOK,title,author,genre,price,cover+".jpg");
+			System.out.println("inserted entry ");
 			int rowCount2=jdbcTemplate.update(ADD_BOOKNO,1,title);
 			if(rowCount2>0){
 				return "New book has been added to the shelf";

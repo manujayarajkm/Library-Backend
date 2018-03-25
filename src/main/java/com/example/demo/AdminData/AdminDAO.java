@@ -3,6 +3,8 @@ package com.example.demo.AdminData;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import com.example.demo.POJO.Book;
 import com.example.demo.POJO.Hire;
 import com.example.demo.POJO.User;
@@ -17,5 +19,6 @@ public interface AdminDAO {
 	public String unBlockMember(int userId)throws SQLException,ClassNotFoundException;
 	public String addRemarks(int userId)throws SQLException,ClassNotFoundException;
 	public List<Hire> getHireDetails(int hireTd)throws SQLException,ClassNotFoundException;
-
+	public String addNewBook(String title,String author,String genre,float price,String cover) throws SQLException,ClassNotFoundException;
+	public String saveCoverImage(MultipartFile file,String name)throws SQLException,ClassNotFoundException;
 }
