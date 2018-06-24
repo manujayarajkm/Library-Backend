@@ -116,6 +116,7 @@ public class LibraryController {
 	@RequestMapping(value="/viewAllBooks",method=RequestMethod.GET)
 	public List<Book> viewAll() throws ClassNotFoundException, SQLException{
 		LOGGER.info("@Controller Fetching all available books");
+		
 		return bookService.getAllBooks();
 		
 	}
@@ -317,7 +318,12 @@ public class LibraryController {
 	}
 	
 	
-	
+	@RequestMapping(value="/getUserId/{username}",method=RequestMethod.GET)
+	public int getUserId(@PathVariable String username) throws SQLException, ClassNotFoundException {
+		// TODO Auto-generated method stub
+		
+		return memberService.getUserId(username);
+	}
 	
 	
 	

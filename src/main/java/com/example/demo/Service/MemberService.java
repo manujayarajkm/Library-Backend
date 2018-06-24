@@ -10,4 +10,6 @@ public interface MemberService {
 	public String RemoveMember(int userId)throws SQLException,ClassNotFoundException;
 	public User login(String username,String password)throws SQLException,ClassNotFoundException;
 	public String checkUsername(String username)throws SQLException,ClassNotFoundException;
+	public int getUserId(String username)throws SQLException,ClassNotFoundException;
+
 }

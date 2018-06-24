@@ -52,4 +52,10 @@ public class MemberServiceImpl implements MemberService{
 		return memberDAO.checkUsername(username);
 	}
 
+	@Override
+	public int getUserId(String username) throws SQLException, ClassNotFoundException {
+		// TODO Auto-generated method stub
+		return memberDAO.getUserId(username);
+	}
+
 }

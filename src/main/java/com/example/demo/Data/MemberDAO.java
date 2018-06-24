@@ -15,6 +15,8 @@ public interface MemberDAO {
 	public String checkUsername(String username)throws SQLException,ClassNotFoundException;
 	public String encryptPassword(String password)throws SQLException,ClassNotFoundException;
 	public String decryptPassword(String password)throws SQLException,ClassNotFoundException;
+	public int getUserId(String username)throws SQLException,ClassNotFoundException;
+
 
 
 }

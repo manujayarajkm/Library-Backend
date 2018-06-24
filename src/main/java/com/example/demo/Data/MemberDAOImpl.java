@@ -34,6 +34,7 @@ public class MemberDAOImpl implements MemberDAO {
 	private final static String INSERT_SALT="update user set salt=? where uname=?";
 	private final static String INSERT_PASSWORD="update user set password=? where uname=?";
 
+
 	
 
 	
@@ -269,6 +270,14 @@ public class MemberDAOImpl implements MemberDAO {
 		}
 		return str;
 		
+	}
+
+	@Override
+	public int getUserId(String username) throws SQLException, ClassNotFoundException {
+		// TODO Auto-generated method stub
+		
+		int userId=jdbctemplate.queryForObject(RETREIVE_USERID, new Object[]{username},Integer.class);
+		return userId;
 	}
 
 	

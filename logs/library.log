@@ -1,0 +1,154 @@
+2018-06-24 12:59:21,811 INFO  com.example.demo.LibraryApplication - Starting LibraryApplication on Manu with PID 1477 (/Users/Manu/Desktop/Experiments/Project-1/Library/target/classes started by Manu in /Users/Manu/Desktop/Experiments/Project-1/Library)
+2018-06-24 12:59:21,811 INFO  com.example.demo.LibraryApplication - No active profile set, falling back to default profiles: default
+2018-06-24 12:59:22,580 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2018-06-24 12:59:22,581 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-06-24 12:59:22,591 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-06-24 12:59:34,744 INFO  com.example.demo.LibraryApplication - Starting LibraryApplication on Manu with PID 1478 (/Users/Manu/Desktop/Experiments/Project-1/Library/target/classes started by Manu in /Users/Manu/Desktop/Experiments/Project-1/Library)
+2018-06-24 12:59:34,747 INFO  com.example.demo.LibraryApplication - No active profile set, falling back to default profiles: default
+2018-06-24 12:59:37,658 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2018-06-24 12:59:37,660 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-06-24 12:59:37,769 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-06-24 12:59:38,267 INFO  com.example.demo.CORSFIlter - Initialising CORS
+2018-06-24 12:59:40,461 INFO  com.example.demo.LibraryApplication - Started LibraryApplication in 5.997 seconds (JVM running for 6.937)
+2018-06-24 13:00:16,169 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-24 13:00:16,252 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd - Inside MyAspects
+2018-06-24 13:00:16,252 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd -  Request reached User Controller layer 
+2018-06-24 13:00:16,254 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd -  Allowed execution for cartReview
+2018-06-24 13:00:16,256 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd - Arguments :
+2018-06-24 13:00:17,650 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd - Inside MyAspects
+2018-06-24 13:00:17,651 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd -  Request reached User Controller layer 
+2018-06-24 13:00:17,652 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd -  Allowed execution for viewAll
+2018-06-24 13:00:17,652 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd - Arguments :
+2018-06-24 13:00:17,652 INFO  c.e.d.Controller.LibraryController - @Controller Fetching all available books
+2018-06-24 13:00:21,010 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd - Inside MyAspects
+2018-06-24 13:00:21,024 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd - Inside MyAspects
+2018-06-24 13:00:21,026 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd -  Request reached User Controller layer 
+2018-06-24 13:00:21,026 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd -  Allowed execution for getMyNotifications
+2018-06-24 13:00:21,026 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd - Arguments :
+2018-06-24 13:00:21,022 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd -  Request reached User Controller layer 
+2018-06-24 13:00:21,031 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd -  Allowed execution for myHires
+2018-06-24 13:00:21,032 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd - Arguments :
+2018-06-24 13:00:24,514 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd - Inside MyAspects
+2018-06-24 13:00:24,514 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd -  Request reached User Controller layer 
+2018-06-24 13:00:24,515 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd -  Allowed execution for myHires
+2018-06-24 13:00:24,521 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$86ac0ffd - Arguments :
+2018-06-24 13:01:37,372 INFO  com.example.demo.LibraryApplication - Starting LibraryApplication on Manu with PID 1488 (/Users/Manu/Desktop/Experiments/Project-1/Library/target/classes started by Manu in /Users/Manu/Desktop/Experiments/Project-1/Library)
+2018-06-24 13:01:37,378 INFO  com.example.demo.LibraryApplication - No active profile set, falling back to default profiles: default
+2018-06-24 13:01:40,003 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2018-06-24 13:01:40,005 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-06-24 13:01:40,130 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-06-24 13:01:40,711 INFO  com.example.demo.CORSFIlter - Initialising CORS
+2018-06-24 13:01:43,223 INFO  com.example.demo.LibraryApplication - Started LibraryApplication in 6.332 seconds (JVM running for 7.335)
+2018-06-24 13:02:59,098 INFO  com.example.demo.LibraryApplication - Starting LibraryApplication on Manu with PID 1488 (/Users/Manu/Desktop/Experiments/Project-1/Library/target/classes started by Manu in /Users/Manu/Desktop/Experiments/Project-1/Library)
+2018-06-24 13:02:59,098 INFO  com.example.demo.LibraryApplication - No active profile set, falling back to default profiles: default
+2018-06-24 13:02:59,880 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2018-06-24 13:02:59,880 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-06-24 13:02:59,890 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-06-24 13:03:00,032 INFO  com.example.demo.CORSFIlter - Initialising CORS
+2018-06-24 13:03:01,464 INFO  com.example.demo.LibraryApplication - Started LibraryApplication in 2.429 seconds (JVM running for 85.571)
+2018-06-24 15:18:15,032 INFO  com.example.demo.LibraryApplication - Starting LibraryApplication on Manu with PID 1488 (/Users/Manu/Desktop/Experiments/Project-1/Library/target/classes started by Manu in /Users/Manu/Desktop/Experiments/Project-1/Library)
+2018-06-24 15:18:15,034 INFO  com.example.demo.LibraryApplication - No active profile set, falling back to default profiles: default
+2018-06-24 15:18:16,955 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2018-06-24 15:18:16,959 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-06-24 15:18:16,978 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-06-24 15:18:17,680 INFO  com.example.demo.CORSFIlter - Initialising CORS
+2018-06-24 15:18:20,946 INFO  com.example.demo.LibraryApplication - Started LibraryApplication in 6.091 seconds (JVM running for 356.971)
+2018-06-24 15:18:49,756 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-24 15:18:49,835 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Controller layer 
+2018-06-24 15:18:49,835 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Controller layer 
+2018-06-24 15:18:49,839 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for myHires
+2018-06-24 15:18:49,839 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyNotifications
+2018-06-24 15:18:49,841 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:18:49,842 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:18:49,872 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Service layer 
+2018-06-24 15:18:49,872 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Service layer 
+2018-06-24 15:18:49,873 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyNotifications
+2018-06-24 15:18:49,873 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:18:49,873 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyHires
+2018-06-24 15:18:49,874 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:18:49,885 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Data layer 
+2018-06-24 15:18:49,885 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Data layer 
+2018-06-24 15:18:49,885 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyNotifications
+2018-06-24 15:18:49,885 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyHires
+2018-06-24 15:18:49,885 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:18:49,885 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:18:53,481 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Controller layer 
+2018-06-24 15:18:53,482 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for viewAll
+2018-06-24 15:18:53,492 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:18:53,493 INFO  c.e.d.Controller.LibraryController - @Controller Fetching all available books
+2018-06-24 15:18:53,493 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Service layer 
+2018-06-24 15:18:53,494 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getAllBooks
+2018-06-24 15:18:53,494 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:18:53,508 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Data layer 
+2018-06-24 15:18:53,509 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getAllBooks
+2018-06-24 15:18:53,509 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:19:19,474 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Controller layer 
+2018-06-24 15:19:19,475 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for myHires
+2018-06-24 15:19:19,475 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:19:19,475 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Service layer 
+2018-06-24 15:19:19,476 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyHires
+2018-06-24 15:19:19,476 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:19:19,476 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Data layer 
+2018-06-24 15:19:19,476 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyHires
+2018-06-24 15:19:19,476 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:19:19,518 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Controller layer 
+2018-06-24 15:19:19,519 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyNotifications
+2018-06-24 15:19:19,519 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:19:19,519 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Service layer 
+2018-06-24 15:19:19,520 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyNotifications
+2018-06-24 15:19:19,520 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:19:19,520 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Data layer 
+2018-06-24 15:19:19,520 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyNotifications
+2018-06-24 15:19:19,520 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:19:23,104 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Controller layer 
+2018-06-24 15:19:23,104 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyHistory
+2018-06-24 15:19:23,105 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:19:23,105 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Service layer 
+2018-06-24 15:19:23,105 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyHistory
+2018-06-24 15:19:23,105 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:19:23,106 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Data layer 
+2018-06-24 15:19:23,106 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyHistory
+2018-06-24 15:19:23,106 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:19:48,899 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Controller layer 
+2018-06-24 15:19:48,899 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for myHires
+2018-06-24 15:19:48,900 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:19:48,900 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Service layer 
+2018-06-24 15:19:48,900 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyHires
+2018-06-24 15:19:48,901 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:19:48,902 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Data layer 
+2018-06-24 15:19:48,902 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyHires
+2018-06-24 15:19:48,903 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:19:48,949 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Controller layer 
+2018-06-24 15:19:48,949 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyNotifications
+2018-06-24 15:19:48,949 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:19:48,950 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Service layer 
+2018-06-24 15:19:48,950 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyNotifications
+2018-06-24 15:19:48,950 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:19:48,950 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Data layer 
+2018-06-24 15:19:48,951 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getMyNotifications
+2018-06-24 15:19:48,951 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:20:39,168 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Controller layer 
+2018-06-24 15:20:39,173 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for viewNew
+2018-06-24 15:20:39,174 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:20:39,174 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Service layer 
+2018-06-24 15:20:39,174 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getNewBooks
+2018-06-24 15:20:39,174 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:20:39,174 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Data layer 
+2018-06-24 15:20:39,175 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getNewBooks
+2018-06-24 15:20:39,175 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:20:46,320 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Controller layer 
+2018-06-24 15:20:46,321 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for viewNew
+2018-06-24 15:20:46,322 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:20:46,322 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Service layer 
+2018-06-24 15:20:46,322 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getNewBooks
+2018-06-24 15:20:46,322 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:20:46,323 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Request reached User Data layer 
+2018-06-24 15:20:46,323 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa -  Allowed execution for getNewBooks
+2018-06-24 15:20:46,323 INFO  c.e.d.U.MyAspects$$EnhancerBySpringCGLIB$$d36cffaa - Arguments :
+2018-06-24 15:25:37,185 INFO  com.example.demo.LibraryApplication - Starting LibraryApplication on Manu with PID 1488 (/Users/Manu/Desktop/Experiments/Project-1/Library/target/classes started by Manu in /Users/Manu/Desktop/Experiments/Project-1/Library)
+2018-06-24 15:25:37,187 INFO  com.example.demo.LibraryApplication - No active profile set, falling back to default profiles: default
+2018-06-24 15:25:38,602 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2018-06-24 15:25:38,604 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-06-24 15:25:38,615 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-06-24 15:25:38,879 INFO  com.example.demo.CORSFIlter - Initialising CORS
+2018-06-24 15:25:44,306 INFO  com.example.demo.LibraryApplication - Started LibraryApplication in 7.209 seconds (JVM running for 800.306)
